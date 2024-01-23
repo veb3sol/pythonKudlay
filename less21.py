@@ -10,6 +10,10 @@ my_str = ['Око за око', 'А роза упала на лапу Азора
 new_words = [i for i in words if i.upper() == i.upper()[::-1]]
 print(new_words)
 
+uu = 'Привет Мартин'
+print(uu.replace('П', 'ю'))
+print(uu.lower())
+
 new_my_str = [i for i in my_str if [j.lower() for j in i if j != ' '] == [k.lower() for k in i.lower()[::-1] if k != ' ']]
 print(new_my_str)
 
