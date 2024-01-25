@@ -65,6 +65,3 @@ print(v, v3)
 g = frozenset('hello')
 # g.add()  -- ошибка!!
 print(g, type(g))   #frozenset({'o', 'e', 'h', 'l'}) <class 'frozenset'>
-
-
-

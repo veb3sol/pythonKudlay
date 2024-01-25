@@ -44,3 +44,10 @@ for key, value in produkt.items():
     print(value)    # вывод значения
 
 
+products = [
+    {'title': 'Sony', 'price': 100},
+    {'title': 'iPhone', 'price': 200},
+]
+
+for i in products:
+    print(f"{i['title']} -- {i['price']}")
