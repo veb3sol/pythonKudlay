@@ -2,7 +2,7 @@
 # Методы словаря
 
 # dict.clear()    -- очищает словарь
-# dict().copy()       -- возращает копию словаря
+# dict.copy()       -- возращает копию словаря
 # dict.get(key[, default]) -- возращает значение ключа, если такого ключа нету - default (по умолч None)
 # dict.items()    -- возращает пары (ключ, значение)
 # dict.keys()     -- возращает ключи в словаре
@@ -21,7 +21,7 @@ produkt = {'title': 'Sony', 'price': 100}
 #print(produkt.pop('title', 'no')) # если такого ключа нету - no
 #print(produkt) #{'price': 100}
 
-#print(produkt.popitem()) # убирает любую запись???
+#print(produkt.popitem()) # убирает последнюю запись
 #print(produkt)  #{'title': 'Sony'}  - осталась одна запись
 
 #print(produkt.setdefault('title'))  #Sony  и словарь не поменялся
