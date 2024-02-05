@@ -45,7 +45,7 @@ print(ff(2))  # 0
 
 
 def ff1(a):
-    return sum([i for i in range(0, a + 1) if i % 3 == 0 or i % 5 == 0])
+    return sum([i for i in range(0, a + 1) if not (i % 3) or not (i % 5) ])
 
 print(ff1(10))  # 33
 
