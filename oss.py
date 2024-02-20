@@ -56,8 +56,57 @@ import os
 # Переименование папок
 # os.rename('E:\\news', 'E:\\super') # название папки изменилось
 
-# 42 min
+# os.chdir('E:\\super')
+# for root,dirs,fls in os.walk('E:\\super'):
+#     print(root)
+#     print(dirs)
+#     print(fls)
+
+#     получаем такое
+# E:\super
+# ['8888', 'sub']
+# ['exelka.xlsx', 'img.bmp', 'newbase.txt', 'wordik.docx']
+# E:\super\8888
+# ['yuyu']
+# ['hhh.zip']
+# E:\super\8888\yuyu
+# []
+# []
+# E:\super\sub
+# ['10']
+# ['cvc.txt']
+# E:\super\sub\10
+# []
+# []
 
 
+# sys
+# import sys
+# # print(sys.exec_prefix) # где именно установлен питон
+# # print(sys.executable)  # путь к интерпритатору питона
+# print(sys.getwindowsversion())  # данные о текущей версии винды
+
+# ДЗ
+# ot = '  '
+# od = True
+# for root,dirs,fls in os.walk('E:\\super'):
+#     print(ot + root)
+#     if(fls):
+#         for f in fls:
+#             print(ot*2+f)
+#     if(dirs):
+#         for d in dirs:
+#             print(ot*2+d)
+
+# Дз-2
+
+def get_tree_path(fold):
+    for root, fld, fls in os.walk(fold):
+        kol_sep = root.count(os.sep)
+        kol_prob = ' ' * 4 * kol_sep
+        print(f'{kol_prob} [{os.path.basename(root)}]')
+        kol_prob_2 = kol_prob + '    '
+        print(f'{kol_prob_2} {fls}')
 
 
+get_tree_path('E:\\super')
