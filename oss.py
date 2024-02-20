@@ -100,13 +100,33 @@ import os
 
 # Дз-2
 
-def get_tree_path(fold):
-    for root, fld, fls in os.walk(fold):
-        kol_sep = root.count(os.sep)
-        kol_prob = ' ' * 4 * kol_sep
-        print(f'{kol_prob} [{os.path.basename(root)}]')
-        kol_prob_2 = kol_prob + '    '
-        print(f'{kol_prob_2} {fls}')
+# def get_tree_path(fold):
+#     for root, fld, fls in os.walk(fold):
+#         kol_sep = root.count(os.sep)
+#         kol_prob = ' ' * 4 * kol_sep
+#         print(f'{kol_prob} [{os.path.basename(root)}]')
+#         kol_prob_2 = kol_prob + '    '
+#         print(f'{kol_prob_2} {fls}')
+#
+#
+# get_tree_path('E:\\super')
+
+# Дополнительно os
+#os.makedirs('qq1/qq2/qq3', exist_ok = True) # в текущей папке создаем папку с вложенными папками
+#exist_ok = True -- не выдает ошибку, если такая папка существует, по умолчанию False
+
+#os.replace('qq1', 'C:\\nnn') # перемещение папки
+
+# print(os.listdir()) - список всех файлов
+
+#print(os.scandir()) #возвращает обьект который можно иттерировать и обращаться
 
 
-get_tree_path('E:\\super')
+# for item in os.scandir():         перебираем все что есть в текущей папке
+#     if item.is_file():                    если файл...
+#         print(item.name, '--file')                выводим имя
+#     if item.is_dir():                         если папка...
+#         print(item.name, '--dir')
+
+# os.rmdir() -- удаление 1 папки если она пустая
+# os.removedirs() -- удаляет все вложенные папки если пустые
